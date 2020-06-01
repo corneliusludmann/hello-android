@@ -1,0 +1,27 @@
+// https://developer.android.com/studio/build#module-level
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
+
+    defaultConfig {
+        applicationId "org.ludmann.helloandroid"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName '1.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    // https://developer.android.com/topic/libraries/support-library/packages
+}

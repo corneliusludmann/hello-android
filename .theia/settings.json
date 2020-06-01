@@ -1,0 +1,12 @@
+{
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.factorypath": true,
+        "**/.git": true,
+        "**/.gradle": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.theia": true,
+        "**/gradle": true
+    }
+}
