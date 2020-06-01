@@ -1,5 +1,8 @@
 tasks:
+  - name: Installing fastlane
+    init: brew install fastlane && echo 'export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH' >> ~/.bashrc && exit
   - init: >
+      export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH;
       export ANDROID_HOME=/workspace/android-home;
       mkdir -p "$ANDROID_HOME" &&
       curl -sSLo /tmp/android-cmdline-tools.zip https://dl.google.com/android/repository/commandlinetools-linux-6514223_latest.zip &&
