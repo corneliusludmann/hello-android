@@ -1,14 +1,8 @@
+image:
+  file: .gitpod.Dockerfile
+
 tasks:
-  - name: Installing fastlane
-    init: brew install fastlane && echo 'export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH' >> ~/.bashrc && exit
   - init: >
-      export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH;
-      export ANDROID_HOME=/workspace/android-home;
-      mkdir -p "$ANDROID_HOME" &&
-      curl -sSLo /tmp/android-cmdline-tools.zip https://dl.google.com/android/repository/commandlinetools-linux-6514223_latest.zip &&
-      unzip -d "$ANDROID_HOME/cmdline-tools/" /tmp/android-cmdline-tools.zip &&
-      rm /tmp/android-cmdline-tools.zip &&
-      export PATH=$PATH:$ANDROID_HOME/cmdline-tools/tools/bin &&
       yes 2>/dev/null | sdkmanager "platform-tools" "platforms;android-29" &&
       ./gradlew build
     command: |
