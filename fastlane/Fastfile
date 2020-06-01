@@ -1,0 +1,38 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+ENV['FASTLANE_HIDE_CHANGELOG'] = 'true'
+
+
+default_platform(:android)
+
+platform :android do
+  desc "Build the app"
+  lane :build do
+    gradle(task: "build")
+  end
+
+  desc "Deploy Preview"
+  lane :preview do
+    # Upload to Appetize.io
+    appetize(
+      path: "app/build/outputs/apk/debug/app-debug.apk",
+      platform: "android"
+    )
+
+    # Open app preview in browser
+    #sh("python", "-m", "webbrowser", "https://appetize.io/embed/" + lane_context[SharedValues::APPETIZE_PUBLIC_KEY] + "?device=pixel4&autoplay=true")
+  end
+end
