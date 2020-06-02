@@ -2,9 +2,7 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: >
-      yes 2>/dev/null | sdkmanager "platform-tools" "platforms;android-29" &&
-      ./gradlew build
+  - init: ./gradlew build
     command: |
       if [[ -z "$APPETIZE_API_TOKEN" ]]; then
           echo "Appetize API token not set. Run:"
