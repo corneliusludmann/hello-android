@@ -38,4 +38,5 @@ in a running Gitpod workspace of this repo and restart your workspace or go to h
 - [Android Developer Guides](https://developer.android.com/guide)
 - [Android Developer Guides: Build your first app](https://developer.android.com/training/basics/firstapp)
 - [Android sdkmanager user guide](https://developer.android.com/studio/command-line/sdkmanager)
+- [Android: Build your app from the command line](https://developer.android.com/studio/build/building-cmdline)
 - [fastlane Docs](https://docs.fastlane.tools/)
